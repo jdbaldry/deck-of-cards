@@ -1,6 +1,10 @@
-;; nix-shell -p mitscheme --run "scheme --quiet < deck-of-cards.scm"
 ;; From https://www.theguardian.com/science/2021/jun/14/did-you-solve-it-ace-of-spades
 ;; Unintuitively, they are all the same likelihood
+;; $ nix-shell -p mitscheme --run "scheme --quiet < deck-of-cards.scm"
+;; red: 1/26
+;; clubs: 1/26
+;; face: 1/26
+;; random guess: 1/26
 
 (display "red: ")
 (display (+
