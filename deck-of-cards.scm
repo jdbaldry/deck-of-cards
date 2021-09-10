@@ -7,33 +7,63 @@
 ;; random guess: 1/26
 
 (display "red: ")
-(display (+
-          ;; is red
-          (* 26/52 1/26)
-          ;; is not red
-          (* 26/52 1/26)))
+
+(display
+ ;; Final probability of guessing the correct card is the sum of:
+ (+
+  (*
+   ;; - the probability that the card is red
+   26/52
+   ;;   multiplied by the probability of guessing the correct red card
+   1/26)
+  (*
+   ;; - the probability that the card is not red
+   26/52
+   ;;   multiplied by the probability of guessing the correct not-red (black) card.
+   1/26)))
 (newline)
 
 (display "clubs: ")
-(display (+
-          ;; is clubs
-          (* 13/52 1/13)
-          ;; is not face
-          (* 39/52 1/39)))
+(display
+ ;; Final probability of guessing the correct card is the sum of:
+ (+
+  (*
+   ;; - the probability that the card is a club
+   13/52
+   ;;   multiplied by the probability of guessing the correct club card
+   1/13)
+  (*
+   ;; - the probability that the card is not a club
+   39/52
+   ;;   multiplied by the probability of guessing the correct not-club card.
+   1/39)))
 (newline)
 
 (display "face: ")
-(display (+
-          ;; is face
-          (* 12/52 1/12)
-          ;; is not face
-          (* 40/52 1/40)))
+(display
+ ;; Final probability of guessing the correct card is the sum of:
+ (+
+  (*
+   ;; - the probability that the card is a face
+   12/52
+   ;;   multiplied by the probability of guessing the correct face card
+   1/12)
+  (*
+   ;; - the probability that the card is not a face
+   40/52
+   ;;   multiplied by the probability of guessing the correct not-face card.
+   1/40)))
 (newline)
 
 (display "random guess: ")
-(display (+
-          ;; correct
-          1/52
-          ;; second guess
-          (* 51/52 1/51)))
+ ;; Final probability of guessing the correct card is the sum of:
+(display
+ (+
+  ;;  - getting lucky on the first question!
+  1/52
+  (*
+   ;; - not getting lucky on the first question
+   51/52
+   ;;   but getting lucky on the guess
+   1/51)))
 (newline)
